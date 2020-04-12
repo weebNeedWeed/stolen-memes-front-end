@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+    app:
+        image: httpd:2.4-alpine
+        ports:
+            - "80:80"
+        restart: "no"
+        volumes:
+            - ./build:/usr/local/apache2/htdocs/
